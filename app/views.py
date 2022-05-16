@@ -3,11 +3,11 @@ from django.shortcuts import render, redirect
 
 
 
-# auth 
+# auth      
 
 def index(request):
     return render(request, 'index.html')
 
 def blogs(request):
     
-    return render (request, 'blogs.html')
+    return render (request, 'blog.html')
