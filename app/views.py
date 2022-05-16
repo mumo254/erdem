@@ -7,3 +7,7 @@ from django.shortcuts import render, redirect
 
 def index(request):
     return render(request, 'index.html')
+
+def blogs(request):
+    
+    return render (request, 'blogs.html')
