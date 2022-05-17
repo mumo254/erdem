@@ -24,3 +24,14 @@ def blogs(request):
         "form":form,
     }
     return render (request, 'blog.html', ctx )
+
+def comments(request,blogs_id):
+  form = ReplyForm()
+  post = Blogs.objects.filter(pk = blogs_id).first()
+  if request.method == 'POST':
+    form = ReplyForm(request.POST)
+    if form.is_valid():
+      comment = form.save(commit = False)
+      comment.blog = post
+      comment.save() 
+  return redirect('blogs') 

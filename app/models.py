@@ -14,7 +14,7 @@ class Reply(models.Model):
     comment = models.CharField(max_length=250, blank=False)
     name = models.CharField(max_length=100, blank=False)
     email = models.EmailField(max_length=256, null=True)
-    blog = models.ForeignKey(Blogs, on_delete=models.CASCADE)
+    blog = models.ForeignKey(Blogs, on_delete=models.CASCADE, related_name="comments")
 
 
     def __str__(self):
