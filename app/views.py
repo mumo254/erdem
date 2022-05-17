@@ -9,5 +9,10 @@ def index(request):
     return render(request, 'index.html')
 
 def blogs(request):
-    
-    return render (request, 'blog.html')
+    posts = Blogs.objects.all()
+    reply = 
+    print(posts)
+    ctx= {
+        "posts":posts,
+    }
+    return render (request, 'blog.html', ctx )
