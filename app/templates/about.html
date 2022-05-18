@@ -72,25 +72,20 @@
                   <a class="header__menu--link text-white" href="{% url 'index' %}">Home
                   </a>
                 </li>
-                <li class="header__menu--items mega__menu--items style2">
-                  <a class="header__menu--link text-white" href="shop.html">Shop
-                  </a>
-                </li>
                 <li class="header__menu--items style2">
-                  <a class="header__menu--link text-white" href="about.html">What is Erdem?
-                  </a>
-                </li>
-                <li class="header__menu--items style2">
-                  <a class="header__menu--link text-white" href="blog.html">Blog
+                  <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem?
                   </a>
                 </li>
                 <li class="header__menu--items style2 d-none d-xl-block">
-                  <a class="header__menu--link text-white" href="shop.html">Categories
+                  <a class="header__menu--link text-white" href="{% url 'solutions' %}">Solutions
                   </a>
                 </li>
-                
                 <li class="header__menu--items style2">
-                  <a class="header__menu--link text-white" href="contact.html">Contact
+                  <a class="header__menu--link text-white" href="{% url 'blogs' %}">Blog
+                  </a>
+                </li>
+                <li class="header__menu--items style2">
+                  <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact
                   </a>
                 </li>
               </ul>
@@ -112,7 +107,7 @@
                 </li>
                 
                 <li class="header__menu--items">
-                  <a class="header__menu--link text-white" href="about.html">What is Erdem?
+                  <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem?
 
                   </a>
                 </li>
@@ -121,11 +116,11 @@
                   </a>
                 </li>
                 <li class="header__menu--items d-none d-xl-block">
-                  <a class="header__menu--link text-white" href="shop.html">Categories
+                  <a class="header__menu--link text-white" href="{% url 'solutions' %}">Solutions
                   </a>
                 </li>
                 <li class="header__menu--items">
-                  <a class="header__menu--link text-white" href="contact.html">Contact
+                  <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact
                   </a>
                 </li>
               </ul>
@@ -147,19 +142,19 @@
         <nav class="offcanvas__menu">
           <ul class="offcanvas__menu_ul">
             <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="index-2.html">Home</a>
+              <a class="offcanvas__menu_item" href="{% url 'index' %}">Home</a>
             </li>
             <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="#">Shop</a>
+              <a class="offcanvas__menu_item" href="{% url 'about' %}">About</a>
             </li>
             <li class="offcanvas__menu_li">
               <a class="offcanvas__menu_item" href="{% url 'blogs' %}">Blog</a>
             </li>
             <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="about.html">About</a>
+              <a class="offcanvas__menu_item" href="{% url 'solutions' %}">Solutions</a>
             </li>
             <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="contact.html">Contact</a>
+              <a class="offcanvas__menu_item" href="{% url 'contact' %}">Contact</a>
             </li>
           </ul>
         </nav>
@@ -181,7 +176,7 @@
               </h1>
               <ul class="breadcrumb__content--menu d-flex justify-content-center">
                 <li class="breadcrumb__content--menu__items">
-                  <a class="text-white" href="index-2.html">Home</a>
+                  <a class="text-white" href="{% url 'index' %}">Home</a>
                 </li>
                 <li class="breadcrumb__content--menu__items">
                   <span class="text-white">About Us</span>

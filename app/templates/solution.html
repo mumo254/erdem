@@ -82,22 +82,18 @@
                                     </a>
                                 </li>
                                 <li class="header__menu--items mega__menu--items style2">
-                                    <a class="header__menu--link text-white" href="shop.html">Shop 
+                                    <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem?
                                     </a>
                                 </li>
                                 <li class="header__menu--items style2">
-                                    <a class="header__menu--link text-white" href="about.html">About US </a>  
-                                </li>
-                                <li class="header__menu--items style2">
-                                    <a class="header__menu--link text-white" href="blog.html">Blog 
+                                    <a class="header__menu--link text-white" href="{% url 'blogs' %}">Blog 
                                     </a>
                                 </li>
-                                <li class="header__menu--items style2 d-none d-xl-block">
-                                    <a class="header__menu--link text-white" href="shop.html">Categories </a>  
-                                </li>
-                               
                                 <li class="header__menu--items style2">
-                                    <a class="header__menu--link text-white" href="contact.html">Contact </a>  
+                                    <a class="header__menu--link text-white" href="{% url 'solutions' %}">Solutions</a>  
+                                </li>
+                                <li class="header__menu--items style2">
+                                    <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact </a>  
                                 </li>
                             </ul>
                         </nav>
@@ -115,19 +111,16 @@
                                     <a class="header__menu--link text-white" href="{% url 'index' %}">Home 
                                     </a>
                                 </li>
-                                <li class="header__menu--items mega__menu--items">
-                                    <a class="header__menu--link text-white" href="shop.html">Shop 
-                                    </a>
-                                </li>
                                 <li class="header__menu--items">
-                                    <a class="header__menu--link text-white" href="{% url 'about' %}">About US </a>  
+                                    <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem?</a>  
                                 </li>
                                 <li class="header__menu--items">
                                     <a class="header__menu--link text-white" href="{% url 'blogs' %}">Blog 
                                     </a>
                                 </li>
-                                <li class="header__menu--items d-none d-xl-block">
-                                    <a class="header__menu--link text-white" href="shop.html">Categories </a>  
+                                <li class="header__menu--items mega__menu--items">
+                                    <a class="header__menu--link text-white" href="{% url 'solutions' %}">Solutions 
+                                    </a>
                                 </li>
                                 <li class="header__menu--items">
                                     <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact </a>  
@@ -154,13 +147,13 @@
                             <a class="offcanvas__menu_item" href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="offcanvas__menu_li">
-                            <a class="offcanvas__menu_item" href="#">Shop</a>
+                            <a class="offcanvas__menu_item" href="{% url 'about' %}">What is Erdem?</a>
                         </li>
                         <li class="offcanvas__menu_li">
                             <a class="offcanvas__menu_item" href="{% url 'blogs' %}">Blog</a>
                         </li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="about.html">About</a></li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="contact.html">Contact</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="{% url 'solutions' %}">Solutions</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
