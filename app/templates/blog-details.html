@@ -263,7 +263,37 @@
                                                     <div class="comment__content--topbar__left">
                                                         <span class="reviews__comment--content__date2">{{ comment.created_at }}</span>
                                                     </div>
+                                                    <div class="comment">
+                                                    <div id="btn">
                                                     <button class="comment__reply--btn primary__btn" type="submit">Reply</button>
+                                                    </div>
+                                                    <div id="comment">
+                                                    <h2 class="reviews__comment--reply__title mb-20">Reply</h2>
+                                                        <form action="{% url 'comments' blogs_id=blog.id %}" class="comment-form com"
+                                                            id="replyform" method="POST" enctype="multipart/form-data">
+                                                            {% csrf_token%} {% bootstrap_form form %}
+                                                            <div class="form-group text-center">
+                                                                <input type="submit"  class="btn btn-primary login-btn" id="submit" value="Submit" />
+                                                            </div>
+                                                            <input type="hidden" name="next" value="{{next}}" />
+                                                            <br />
+                                                        </form>
+                                                    </div>
+                                                        {% for comment in blog.message.all %}
+                                                        <div class="reviews__comment--inner" style="margin-top:5%;">
+                                                            <div class="reviews__comment--list d-flex">
+                                                                <div class="reviews__comment--content ">
+                                                                    <div class="comment__content--topbar d-flex justify-content-between">
+                                                                        <div class="comment__content--topbar__left">
+                                                                            <span class="reviews__comment--content__date2">{{ comment.created_at }}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="reviews__comment--content__desc"><span><strong>{{comment.name}}</strong></span>: {{ comment.comment }}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                    </div>
                                                 </div>
                                                 <p class="reviews__comment--content__desc"><span><strong>{{comment.name}}</strong></span>: {{ comment.comment }}</p>
                                             </div>
@@ -275,7 +305,6 @@
 
                                 <div class="reviews__comment--reply__area">
                                     {% for blog in blog %}
-
                                     <h2 class="reviews__comment--reply__title mb-20">Leave A Comment</h2>
                                         <form action="{% url 'comments' blogs_id=blog.id %}" class="comment-form com"
                                             id="replyform" method="POST" enctype="multipart/form-data">
@@ -498,7 +527,19 @@
     <!-- Scroll top bar -->
     <button id="scroll__top"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg></button>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#comment").hide();
+    });
+    $("#btn").click(function(){
+        $("#comment").show();
+    });
+    $("#submit").click(function(){
+        $("#comment").hide();
+    });
     
+    </script>
     <!-- All Script JS Plugins here  -->
     <!-- <script src="assets/js/vendor/popper.js" defer="defer"></script> -->
     <!-- <script src="assets/js/vendor/bootstrap.min.js" defer="defer"></script> -->

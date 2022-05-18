@@ -26,7 +26,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=100, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=256, null=True)
-    reply = models.ForeignKey(Reply, on_delete=models.CASCADE, related_name="comments")
+    reply = models.ForeignKey(Reply, on_delete=models.CASCADE, related_name="message")
 
 
     def __str__(self):
