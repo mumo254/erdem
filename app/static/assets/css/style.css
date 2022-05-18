@@ -3844,7 +3844,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .home1__slider--bg {
-    background: url(../img/slider/home1-slider1.png);
+    background: url('https://images.unsplash.com/photo-1421941027568-40ab08ee5592?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHdoaXRlJTIwJTIwYnVpbGRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -3858,7 +3858,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .home1__slider--bg.two {
-    background: url(../img/slider/home1-slider2.png);
+    background: url('https://cdn.pixabay.com/photo/2016/02/08/23/36/isolated-1188036_960_720.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -3872,7 +3872,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .home1__slider--bg.three {
-    background: url(../img/slider/home1-slider3.png);
+    background: url('https://cdn.pixabay.com/photo/2020/07/23/04/35/flyer-5430378_960_720.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
