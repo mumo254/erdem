@@ -26,7 +26,55 @@
     </head>
 
 <body>
-
+<style>
+    .course{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+     .course h1{
+        font-size:36px;
+        font-weight:500;
+    }
+    .course p{
+        color:#000000;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 22px;
+        padding:10px;
+    }
+    
+    
+      .row{
+        margin-top: 5%;
+        display: inline-flex;
+        flex-direction:row; 
+        justify-content: space-between;
+       
+        }
+    .course-col{
+        flex-basis:31%;
+        background:#B3E8E5;
+        border-radius:10px;
+        margin-bottom:5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+    
+    }
+    h3{
+        text-align:center;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+    .course-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+    }
+    @media(max-width: 1000px){
+        .row{flex-direction:column;
+        }
+    }
+</style>
     <!-- Start preloader -->
     <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
@@ -180,83 +228,86 @@
               </div>
           </div>
     </div>
-
-    <div class="container-fluid" style="display: flex; margin: 5%;">
+<!-----------Course section-->
+    <section class="course">
+        <h1>Our products and Services</h1><br>
+        <p>Products and services you can enjoy within A dollhouse</p>
+          
         <div class="row">
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%; margin-right: 2%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Motor</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
+          <div class="course-col">
+              <h3>Motor</h3>
+              <p>  Deserunt labore pariatur aute ex mollit eu culpa. Non do minim nostrud ullamco amet nostrud est duis.<br>
+                    Incididunt mollit enim magna proident fugiat consectetur laborum nulla.</p>
+           </div>
+           <div class="course-col">
+            <h3>Medical</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+       
+          <div class="course-col">
+            <h3>Travel</h3>
+            <p>  Deserunt labore pariatur aute ex mollit eu culpa. Non do minim nostrud ullamco amet nostrud est duis.<br>
+                  Incididunt mollit enim magna proident fugiat consectetur laborum nulla.</p>
         </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Medical</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Travel</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216); margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Domestic</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Cyber Security Insurance</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Pension Scheme</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Group life Cover</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        <div class="card col-3" style="background-color: rgb(221, 216, 216);margin-bottom: 5%;">
-            <div class="card-image">
-                <img src="" alt="">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Others</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-    </div>
-    </div>
+        <div class="course-col">
+            <h3>Medical</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Travel</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Demestic</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Personal accident</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Assets</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div><div class="course-col">
+            <h3>Group life cover</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Cyber security insurance</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Professional Indemnity Policy</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+           <div class="course-col">
+            <h3>Others</h3>
+            <p>Minim pariatur aliquip sunt proident est deserunt velit nostrud dolor magna dolor commodo elit.<br>
+               Magna eu ut laborum consectetur minim consequat deserunt commodo excepteur ea aute.<br>
+            </p>
+           </div>
+       </div>
+    
+    </section>
+    
 
     <!-- Start footer section -->
     <footer class="footer__section bg__black">
