@@ -13,10 +13,21 @@ class Blogs(models.Model):
 class Reply(models.Model):
     comment = models.CharField(max_length=250, blank=False)
     name = models.CharField(max_length=100, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=256, null=True)
     blog = models.ForeignKey(Blogs, on_delete=models.CASCADE, related_name="comments")
 
 
     def __str__(self):
         return self.comment
-    
+
+class Comment(models.Model):
+    comment = models.CharField(max_length=250, blank=False)
+    name = models.CharField(max_length=100, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(max_length=256, null=True)
+    reply = models.ForeignKey(Reply, on_delete=models.CASCADE, related_name="message")
+
+
+    def __str__(self):
+        return self.comment
