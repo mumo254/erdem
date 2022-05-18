@@ -13,6 +13,12 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
+def solutions(request):
+    return render (request, 'solution.html')
+
+def contact(request):
+    return render (request, 'contact.html')
+
 def blogs(request):
     posts = Blogs.objects.all()
     form = ReplyForm()
