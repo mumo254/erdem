@@ -12,3 +12,8 @@ class ReplyForm(forms.ModelForm):
     class Meta:
         model = Reply
         fields = ['comment','name','email']
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['comment','name','email']
