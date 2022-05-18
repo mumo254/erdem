@@ -191,7 +191,7 @@
         <!-- End breadcrumb section -->
 
         <!-- Start blog details section -->
-        <section class="blog__details--section section--padding">
+        <section class="blog__details--section section--padding" >
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xxl-9 col-xl-8 col-lg-8">
@@ -203,9 +203,9 @@
                                     <p class="blog__post--meta">Posted by : admin / On :{{ blog.created_at }}</p>                                     
                                 </div>
                                 <div class="blog__thumbnail mb-30">
-                                    <img class="blog__thumbnail--img border-radius-10" src="{{ blog.image.url }}" alt="blog-img">
+                                    <img class="blog__thumbnail--img border-radius-10" style="background-color: black;" src="{{ blog.image.url }}" alt="blog-img">
                                 </div>
-                                <div class="blog__details--content">
+                                <div class="blog__details--content ">
                                     <p class="blog__details--content__desc mb-20">{{ blog.text }}</p>
                                 </div>
                             </div>
@@ -256,9 +256,8 @@
                                 <div class="reviews__comment--area2 mb-50">
                                     <h2 class="reviews__comment--reply__title mb-25">Recent Comments</h2>
                                     {% for comment in blog.comments.all %}
-                                    <div class="reviews__comment--inner">
+                                    <div class="reviews__comment--inner" style="margin-top:5%;">
                                         <div class="reviews__comment--list d-flex">
-                                           
                                             <div class="reviews__comment--content ">
                                                 <div class="comment__content--topbar d-flex justify-content-between">
                                                     <div class="comment__content--topbar__left">
