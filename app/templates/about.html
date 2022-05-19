@@ -496,27 +496,34 @@
                 </div>
             </div>
             <div class="footer__widget footer__widget--width">
-                <h2 class="footer__widget--title text-ofwhite h3">Newsletter 
-                    <button class="footer__widget--button" aria-label="footer widget button">
-                        <svg class="footer__widget--title__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12.355" height="8.394" viewBox="0 0 10.355 6.394">
-                            <path  d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z" transform="translate(-6 -8.59)" fill="currentColor"></path>
-                        </svg>
+              <h2 class="footer__widget--title text-ofwhite h3">
+                Newsletter
+                <button class="footer__widget--button" aria-label="footer widget button">
+                  <svg class="footer__widget--title__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12.355"
+                    height="8.394" viewBox="0 0 10.355 6.394">
+                    <path d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z"
+                      transform="translate(-6 -8.59)" fill="currentColor"></path>
+                  </svg>
+                </button>
+              </h2>
+              <div class="footer__widget--inner">
+                <p class="footer__widget--desc text-ofwhite m-0">
+                  Fill their seed open meat. Sea you <br />
+                  great Saw image stl
+                </p>
+                <div class="newsletter__subscribe">
+                  <form class="newsletter__subscribe--form" method="POST" action="{% url 'addMailingList' reverse='about' %}">
+                    {% csrf_token %}  {% bootstrap_form mForm %}
+                    <button class="newsletter__subscribe--button" type="submit">
+                      Subscribe
                     </button>
-                </h2>
-                <div class="footer__widget--inner">
-                    <p class="footer__widget--desc text-ofwhite m-0">Enter your Email to subscribe to our newsletter</p> 
-                    <div class="newsletter__subscribe">
-                        <form class="newsletter__subscribe--form" action="#">
-                            <label>
-                                <input class="newsletter__subscribe--input" placeholder="Email Address" type="email">
-                            </label>
-                            <button class="newsletter__subscribe--button" type="submit">Subscribe</button>
-                        </form>   
-                    </div> 
-                </div> 
+                  </form>
+                </div>
             </div>
         </div>
-    </div>
+          </div>
+        </div>
+     
 </footer>
 <!-- End footer section -->
   <!-- Scroll top bar -->

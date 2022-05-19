@@ -17,3 +17,8 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['comment','name','email']
+
+class MailingListForm(forms.ModelForm):
+    class Meta:
+        model = MailingList
+        fields = ['email']

@@ -14,4 +14,6 @@ urlpatterns = [
     path('blogsDetails/<blogs_id>', views.blogsDetails, name='blogsDetails'),
     path('blogsDetail/', views.blogsDetail, name='blogsDetail'),
     path('comment/<blogs_id>', views.comment, name='comment'),
+    path("addMailingList/<reverse>", views.addMailingList, name="addMailingList"),
+    path("sendMails/", views.sendMails, name="sendMails"),
 ]
