@@ -2,7 +2,7 @@ virtual/
 venv/
 virtual/
 .env
-virtual/
+env/
 *.pyc
 ./start.sh
 __pycache__/
