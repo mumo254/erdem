@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
+
     <!-- ======= All CSS Plugins here ======== -->
     <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/plugins/glightbox.min.css' %}" />
@@ -237,7 +238,7 @@
                                     <h3 class="card-title">
                                         <a href="">{{ post.heading }}</a>
                                     </h3>
-                                    <a class="blog__content--btn primary__btn" href="{% url 'blogDetails' blogs_id=post.id %}">Read more </a>
+                                    <a class="blog__content--btn primary__btn" href="{% url 'blogDetails' %}">Read more </a>
                                  
                                     
                                 </div>
@@ -431,7 +432,7 @@
                 <div class="footer__widget--inner">
                     <p class="footer__widget--desc text-ofwhite m-0">Enter your Email to subscribe to Erdem Insurance Newsletter</p> 
                     <div class="newsletter__subscribe">
-                        <form class="newsletter__subscribe--form" method="POST" action="{% url 'addMailingList' reverse='contact' %}">
+                        <form class="newsletter__subscribe--form" method="POST" action="{% url 'addMailingList' reverse='blogs' %}">
                           {% csrf_token %}  {% bootstrap_form mForm %}
                           <button class="newsletter__subscribe--button" type="submit">
                             Subscribe
