@@ -1,25 +1,30 @@
-from app.forms import CommentForm, ReplyForm
+from app.forms import CommentForm, MailingListForm, ReplyForm
 from .models import *
 from django.shortcuts import render, redirect
-
+from django.core.mail import send_mail
 
 
 # auth      
 
 
 def index(request):
-    return render(request, 'index.html')
+    mForm = MailingListForm()
+    return render(request, 'index.html',{"mForm":mForm})
 
 def about(request):
-    return render(request, 'about.html')
+    mForm = MailingListForm()
+    return render(request, 'about.html', {"mForm":mForm})
 
 def solutions(request):
-    return render (request, 'solution.html')
+    mForm = MailingListForm()
+    return render (request, 'solution.html',{"mForm":mForm})
 
 def contact(request):
-    return render (request, 'contact.html')
+    mForm = MailingListForm()
+    return render (request, 'contact.html',{"mForm":mForm})
 
 def blogs(request):
+    mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = ReplyForm()
     if request.method == 'POST':  
@@ -32,10 +37,12 @@ def blogs(request):
     ctx= {
         "posts":posts,
         "form":form,
+        "mForm":mForm,
     }
     return render (request, 'blog.html', ctx )
 
 def blogDetails(request,blogs_id):
+    mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = ReplyForm()
     blog = Blogs.objects.filter(pk = blogs_id)
@@ -50,10 +57,12 @@ def blogDetails(request,blogs_id):
         "posts":posts,
         "form":form,
         "blog":blog,
+        "mForm":mForm,
     }
     return render (request, 'blog-details.html', ctx)
 
 def blogDetail(request):
+    mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = ReplyForm()
     blog = Blogs.objects.filter()
@@ -68,10 +77,12 @@ def blogDetail(request):
         "posts":posts,
         "form":form,
         "blog":blog,
+        "mForm":mForm,
     }
     return render (request, 'blog-details.html', ctx)
 
 def comments(request, blogs_id):
+    
   form = ReplyForm()
   post = Blogs.objects.filter(pk = blogs_id).first()
   if request.method == 'POST':
@@ -83,6 +94,7 @@ def comments(request, blogs_id):
   return redirect('blogDetail') 
 
 def blogsDetails(request,blogs_id):
+    mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = CommentForm()
     blog = Blogs.objects.filter(pk = blogs_id)
@@ -91,16 +103,21 @@ def blogsDetails(request,blogs_id):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.save()
+            mails = MailingList.objects.all()
+            for mail in mails:
+                sendMails()
             return redirect('blogs')
     print(posts)
     ctx= {
         "posts":posts,
         "form":form,
         "blog":blog,
+        "mForm":mForm,
     }
     return render (request, 'blog-details.html', ctx)
 
 def blogsDetail(request):
+    mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = CommentForm()
     blog = Blogs.objects.filter()
@@ -115,6 +132,7 @@ def blogsDetail(request):
         "posts":posts,
         "form":form,
         "blog":blog,
+        "mForm":mForm,
     }
     return render (request, 'blog-details.html', ctx)
 
@@ -129,3 +147,17 @@ def comment(request, blogs_id):
       comment.save() 
   return redirect('blogsDetail') 
 
+
+def addMailingList(request, reverse):
+    mForm = MailingListForm()
+    if request.method == "POST":
+        mForm = MailingListForm(request.POST)
+        if mForm.is_valid():
+            mForm.save(commit=True)
+            return redirect(reverse)
+
+
+def sendMails(request):
+    mails = MailingList.objects.all()
+    send_mail("subject", "message", "erdeminsurance22@gmail.com", mails)
+    return redirect("/")

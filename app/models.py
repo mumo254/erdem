@@ -1,3 +1,4 @@
+import email
 from django.db import models
 from cloudinary.models import CloudinaryField
 
@@ -31,3 +32,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment
+
+class MailingList(models.Model):
+    email = models.CharField(max_length=250, blank=False)
+    isSubscribed = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email

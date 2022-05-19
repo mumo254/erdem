@@ -504,16 +504,13 @@
                             great Saw image stl
                         </p>
                         <div class="newsletter__subscribe">
-                            <form class="newsletter__subscribe--form" action="#">
-                                <label>
-                                    <input class="newsletter__subscribe--input" placeholder="Email Address"
-                                        type="email" />
-                                </label>
-                                <button class="newsletter__subscribe--button" type="submit">
-                                    Subscribe
-                                </button>
+                            <form class="newsletter__subscribe--form" method="POST" action="{% url 'addMailingList' reverse='blogs' %}">
+                              {% csrf_token %}  {% bootstrap_form mForm %}
+                              <button class="newsletter__subscribe--button" type="submit">
+                                Subscribe
+                              </button>
                             </form>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
