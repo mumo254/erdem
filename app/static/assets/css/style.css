@@ -6805,7 +6805,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media only screen and (max-width:991px) {
     .footer__section {
-        padding-bottom: 7rem
+        padding-bottom: 7rem;
     }
 }
 
@@ -6971,9 +6971,8 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     right: 0;
     top: 38%;
-    -webkit-transition: .3s;
-    transition: .3s;
-    display: none
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
 @media only screen and (max-width:767px) {
@@ -7086,7 +7085,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .newsletter__subscribe--input:focus::-webkit-input-placeholder {
-    color: #000
+    color: white
 }
 
 .newsletter__subscribe--input.style3 {
@@ -12347,7 +12346,7 @@ details>summary::-webkit-details-marker {
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
-    animation: letters-loading 5s infinite;
+    animation: letters-loading 3s infinite;
     color: var(--black-color);
     content: attr(data-text-preloader);
     left: 0;
@@ -12356,7 +12355,7 @@ details>summary::-webkit-details-marker {
     top: 0;
     -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
-    -webkit-animation: letters-loading 5s infinite
+    -webkit-animation: letters-loading 3s infinite
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading {
