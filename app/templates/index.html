@@ -10,7 +10,7 @@
   <meta name="description" content="Morden Bootstrap HTML5 Template">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- ======= All CSS Plugins here ======== -->
   <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/plugins/glightbox.min.css' %}">
@@ -30,6 +30,7 @@
 
 <body>
     <style>
+        
         .container-fluid .row .col-6 ul li{
             margin-top:3%;
             font-size:larger;
@@ -128,33 +129,39 @@
     </div>
     <!-- End preloader -->
  <!-- Start header area -->
+ <style>
+    
+ </style>
  <header class="header__section">
     <div class="main__header header__sticky">
         <div class="container-fluid">
             <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
                 <div class="header__menu d-none header__sticky--block d-lg-block">
                     <nav class="header__menu--navigation">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
                         <ul class="d-flex">
-                            <li class="header__menu--items style2">
+                            <li class="header__menu--items style2 linkss">
                                 <a class="header__menu--link text-white" href="{% url 'index' %}">Home
                                 </a>
                             </li>
-                            <li class="header__menu--items mega__menu--items style2">
+                            <li class="header__menu--items mega__menu--items style2 linkss">
                                 <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem? 
                                 </a>
                             </li>
-                            <li class="header__menu--items mega__menu--items">
+                            <li class="header__menu--items mega__menu--items  linkss ">
                                 <a class="header__menu--link text-white" href="{% url 'solutions' %}"> Solutions 
                                 </a>
                             </li>
-                            <li class="header__menu--items style2">
+                            <li class="header__menu--items style2  linkss">
                                 <a class="header__menu--link text-white" href="{% url 'blogs' %}">Blog 
                                 </a>
                             </li>
-                            <li class="header__menu--items style2">
+                            <li class="header__menu--items style2  linkss">
                                 <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact Us </a>  
                             </li>
+                            
                         </ul>
+                        <i class="fa fa-bars" onclick="showMenu()"></i>
                     </nav>
                 </div>
             </div>
@@ -166,23 +173,23 @@
                     <div class="header__menu">
                         <nav class="header__menu--navigation">
                             <ul class="d-flex">
-                                <li class="header__menu--items ">
+                                <li class="header__menu--items  linkss">
                                     <a class="header__menu--link text-white" href="{% url 'index' %}">Home
                                     </a>
                                 </li>
-                                <li class="header__menu--items">
+                                <li class="header__menu--items  linkss">
                                     <a class="header__menu--link text-white" href="{% url 'about' %}">What is Erdem?
 
                                     </a>
                                 </li>
-                                <li class="header__menu--items mega__menu--items">
+                                <li class="header__menu--items mega__menu--items  linkss">
                                     <a class="header__menu--link text-white" href="{% url 'solutions' %}">Solutions  
                                     </a>
                                 </li>
-                                <li class="header__menu--items">
+                                <li class="header__menu--items  linkss">
                                     <a class="header__menu--link text-white" href="{% url 'blogs' %}">Blog </a>  
                                 </li>
-                                <li class="header__menu--items">
+                                <li class="header__menu--items linkss">
                                     <a class="header__menu--link text-white" href="{% url 'contact' %}">Contact Us </a>  
                                 </li>
                               
@@ -195,6 +202,16 @@
     </header>
     <!-- End header area -->
 
+    <script>
+        var navLinks = document.getElementById("linkss");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-400px";
+        }
+      </script>
+      
     <main class="main__content_wrapper">
         <!-- Start slider section -->
         <section class="hero__slider--section">
@@ -615,12 +632,13 @@
     <!-- Scroll top bar -->
     <button id="scroll__top"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg></button>
     
+    
   <!-- All Script JS Plugins here  -->
   <!-- <script src="assets/js/vendor/popper.js" defer="defer"></script> -->
   <!-- <script src="assets/js/vendor/bootstrap.min.js" defer="defer"></script> -->
   
   <script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/js/plugins/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins/glightbox.min.js' %}"></scrip>
   
   <!-- Customscript js -->
   <script src="{% static 'assets/js/script.js' %}"></script>
