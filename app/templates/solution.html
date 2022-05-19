@@ -268,7 +268,7 @@
            </div>
            <div class="course-col">
             <div class="shipping__items2--icon">
-                <img src="https://cdn-icons.flaticon.com/png/512/4357/premium/4357580.png?token=exp=1652907857~hmac=579ecbcce8420157de768cfa58cfd6df"
+                <img src="https://www.svgrepo.com/show/96400/ship.svg"
                  alt="" style="width:30%;margin-left:35%;">
             </div>
             <h3>Marine </h3>
@@ -279,7 +279,7 @@
            </div>
            <div class="course-col">
             <div class="shipping__items2--icon">
-                <img src="https://cdn-icons.flaticon.com/png/512/2936/premium/2936719.png?token=exp=1652908133~hmac=ce1203303bf1ba3ee507f561aa838d0b"
+                <img src="https://www.svgrepo.com/show/374863/education.svg"
                  alt="" style="width:30%;margin-left:35%;">
             </div>
             <h3>Education and investment policy</h3>
@@ -413,11 +413,11 @@
                         </button>
                     </h2>
                     <ul class="footer__widget--menu footer__widget--inner">
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="my-account.html">Home</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="cart.html">About us</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="login.html">Solutions</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="login.html">Blog</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="checkout.html">Contact</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'index' %}">Home</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'about' %}">About us</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'solutions' %}">Solutions</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'blogs' %}">Blog</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer__widget">
@@ -431,9 +431,9 @@
                      
                     <ul class="footer__widget--menu footer__widget--inner">
                         <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'about' %}">About Us</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="contact.html">Contact Us</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="portfolio.html">Solutions</a></li>
-                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="privacy-policy.html">Blog</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'contact' %}">Contact Us</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'solutions' %}">Solutions</a></li>
+                        <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{% url 'blogs' %}">Blog</a></li>
                        
                     </ul>
                 </div>
