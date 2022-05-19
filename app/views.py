@@ -61,11 +61,11 @@ def blogDetails(request,blogs_id):
     }
     return render (request, 'blog-details.html', ctx)
 
-def blogDetail(request):
+def blogDetails(request, blogs_id):
     mForm = MailingListForm()
     posts = Blogs.objects.all()
     form = ReplyForm()
-    blog = Blogs.objects.filter()
+    blog = Blogs.objects.filter(pk = blogs_id)
     if request.method == 'POST':  
         form = ReplyForm(request.POST, request.FILES)
         if form.is_valid():
@@ -90,7 +90,7 @@ def comments(request, blogs_id):
       comment = form.save(commit = False)
       comment.blog = post
       comment.save() 
-  return redirect('blogDetail') 
+  return redirect('blogDetails', blogs_id=blogs_id) 
  
 
 

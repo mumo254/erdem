@@ -9,7 +9,6 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('blogs/', views.blogs, name='blogs'),
     path('blogDetails/<blogs_id>', views.blogDetails, name='blogDetails'),
-    path('blogDetail/', views.blogDetail, name='blogDetail'),
     path('comments/<blogs_id>', views.comments, name='comments'),
     path("addMailingList/<reverse>", views.addMailingList, name="addMailingList"),
     path("sendMails/", views.sendMails, name="sendMails"),
