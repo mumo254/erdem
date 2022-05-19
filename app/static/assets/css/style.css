@@ -1526,13 +1526,13 @@ hr {
     padding: 0 1.8rem;
     letter-spacing: .2px;
     border-radius: .3rem;
-    background: var(--secondary-color);
+    background-color: #3BACB6;
     color: var(--white-color);
     border: 0
 }
 
 .primary__btn:hover {
-    background: var(--primary-color);
+    background-color: #82DBD8;
     color: var(--white-color)
 }
 
@@ -2563,7 +2563,8 @@ body.overlay__active::before {
 
 @media only screen and (max-width:991px) {
     .header__menu.header__sticky--block {
-        display: none!important
+        display: block;
+        background-color: #cceaec;
     }
 }
 
