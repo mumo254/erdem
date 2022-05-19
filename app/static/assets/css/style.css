@@ -2558,13 +2558,13 @@ body.overlay__active::before {
 }
 
 .header__sticky .header__sticky--block {
-    display: none
+    display: none;
 }
 
 @media only screen and (max-width:991px) {
     .header__menu.header__sticky--block {
         display: block;
-        background-color: #cceaec;
+        background-color: #3ebbc4;
     }
 }
 
@@ -3854,7 +3854,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media only screen and (max-width:767px) {
     .home1__slider--bg {
-        background-position: 0
+        background-position: 0;
+        height: 50vh;
     }
 }
 
@@ -3868,7 +3869,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media only screen and (max-width:767px) {
     .home1__slider--bg.two {
-        background-position: 0
+        background-position: 0;
+        height: 50vh;
     }
 }
 
@@ -3882,12 +3884,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media only screen and (max-width:767px) {
     .home1__slider--bg.three {
-        background-position: 0
+        background-position: 0;
     }
 }
 
 .hero__slider--items {
-    position: relative
+    position: relative;
 }
 
 .hero__slider--items__inner {
