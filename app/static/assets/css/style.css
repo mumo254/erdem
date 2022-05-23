@@ -142,7 +142,7 @@ h2 {
     .h2,
     h2 {
         font-size: 2.5rem;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -3950,7 +3950,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .slider__content--maintitle {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 @media only screen and (min-width:768px) {
