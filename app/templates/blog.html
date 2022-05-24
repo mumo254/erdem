@@ -237,12 +237,10 @@
                 <div class="section__heading text-center mb-50">
                     <h2 class="section__heading--maintitle">From The Blog</h2>
                 </div>
-                
                 <div class="blog__section--inner">
-                    
-                    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-sm-u-2 row-cols-1 mb--n30" style="display: flex;">
+                    <div class="row row-cols-lg-4 row-cols-md-4 row-cols-sm-4 row-cols-sm-u-4 row-cols-4 mb--n30" style="display: flex;">
                         {% for post in posts %}
-                        <div class="" style="margin-left: 2%; background-color:white;">
+                        <div class="" style="margin-left: 2%; background-color:white; text-align: center; ">
                             <div class="blog__items">
                                 <div class="card-image">
                                     <img src="{{ post.image.url }}" width="100%" height="30%" alt="blog-img" />
@@ -253,8 +251,6 @@
                                         <a href="">{{ post.heading }}</a>
                                     </h3>
                                     <a class="blog__content--btn primary__btn" href="{% url 'blogDetails' blogs_id=post.id %}">Read more </a>
-                                 
-                                    
                                 </div>
                             </div>
                         </div>
