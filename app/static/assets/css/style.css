@@ -142,7 +142,7 @@ h2 {
     .h2,
     h2 {
         font-size: 2.5rem;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -3950,7 +3950,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .slider__content--maintitle {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 @media only screen and (min-width:768px) {
@@ -7003,7 +7003,8 @@ input[type=number]::-webkit-outer-spin-button {
 @media only screen and (min-width:1600px) {
     .footer__widget--menu__wrapper .footer__widget {
         margin-right: 6rem
-    };
+    }
+    ;
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {
@@ -12347,7 +12348,7 @@ details>summary::-webkit-details-marker {
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
-    animation: letters-loading 5s infinite;
+    animation: letters-loading 3s infinite;
     color: var(--black-color);
     content: attr(data-text-preloader);
     left: 0;
@@ -12356,7 +12357,7 @@ details>summary::-webkit-details-marker {
     top: 0;
     -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
-    -webkit-animation: letters-loading 5s infinite
+    -webkit-animation: letters-loading 3s infinite
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading {
