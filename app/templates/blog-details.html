@@ -189,10 +189,10 @@
                                     <h2 class="post__header--title mb-15" style="text-align: center;">{{blog.heading}}</h2>
                                     <p class="blog__post--meta">Posted by : admin / On :{{ blog.created_at }}</p>
                                 </div>
-                                <div style="width: auto; padding-bottom:5%; padding-left: 10%; padding-right: 10%;" >
-                                    <p class="card-text" style="font-size: large; font-weight: 700;"> {{ blog.paragraph1|linebreaks }}</p>
+                                <div class="card-text" style="width: auto; padding-bottom:5%; padding-left: 10%; padding-right: 10%;" >
+                                    <p style="font-size: large; font-weight: 700;"> {{ blog.paragraph1 }}</p>
                                     <p style="font-size: large; font-weight: 700;">{{ blog.paragraph2 }}</p>
-                                    <p class="card-text"  style="font-size: large; font-weight: 700;">{{ blog.paragraph3 }}</p>
+                                    <p style="font-size: large; font-weight: 700;">{{ blog.paragraph3 }}</p>
                                 </div>
                             </div>
                             {% endfor %}
