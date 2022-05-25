@@ -2277,6 +2277,7 @@ body.overlay__active::before {
     width: 2rem;
     height: 2rem;
     padding: 0;
+    color: #000;
     text-indent: -9999px;
     border: none;
     background-color: transparent

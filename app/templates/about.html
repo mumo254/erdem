@@ -115,37 +115,48 @@
     </div>
     
 
-    <!-- Start Offcanvas header menu -->
-    <div class="offcanvas-header">
-      <div class="offcanvas__inner">
-        <div class="offcanvas__logo">
-          <a class="offcanvas__logo_link" href="index-2.html">
-            <img src="assets/img/logo/nav-log.png" alt="Grocee Logo" width="158" height="36" />
+    <div class="main__header header__sticky">
+      <div class="container-fluid">
+          <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
+              <div class="offcanvas__header--menu__open ">
+                  <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg" viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+                      <span class="visually-hidden">Menu Open</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+ <!-- Start Offcanvas header menu -->
+ <div class="offcanvas-header">
+  <div class="offcanvas__inner">
+      <div class="offcanvas__logo">
+          <a class="offcanvas__logo_link" href="{% url 'index' %}">
+              <img src="static/assets/img/logo/Erdemlogo1.png" alt="erdem Logo" width="158" height="36">
           </a>
           <button class="offcanvas__close--btn" data-offcanvas>close</button>
-        </div>
-        <nav class="offcanvas__menu">
-          <ul class="offcanvas__menu_ul">
-            <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="{% url 'blogs' %}">Blog</a>
-            </li>
-            <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="{% url 'solutions' %}">Solutions</a>
-            </li>
-            <li class="offcanvas__menu_li">
-              <a class="offcanvas__menu_item" href="{% url 'contact' %}">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
       </div>
-    </div>
-    <!-- End Offcanvas header menu -->
+      <nav class="offcanvas__menu">
+          <ul class="offcanvas__menu_ul">
+              <li class="offcanvas__menu_li">
+                  <a class="offcanvas__menu_item" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="offcanvas__menu_li">
+                  <a class="offcanvas__menu_item" href="{% url 'index' %}">What is Erdem?</a>
+              </li>
+              <li class="offcanvas__menu_li">
+                  <a class="offcanvas__menu_item" href="{% url 'blogs' %}">Blog</a>
+              </li>
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item"
+                      href="{% url 'solutions' %}">Solutions</a></li>
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item"
+                      href="{% url 'contact' %}">Contact Us</a></li>
+          </ul>
+      </nav>
+  </div>
+</div>
+<!-- End Offcanvas header menu -->
   </header>
   <!-- End header area -->
 
