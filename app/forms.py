@@ -6,7 +6,7 @@ from .models import *
 class CreateBlogForm(forms.ModelForm):
     class Meta:
         model = Blogs
-        fields = ['image', 'heading', 'text']
+        fields = ['image', 'heading', 'paragraph1','paragraph2','paragraph3']
         
 class ReplyForm(forms.ModelForm):
     class Meta:
