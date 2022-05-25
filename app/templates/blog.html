@@ -208,7 +208,16 @@
             </div>
         </section>
         <!-- End breadcrumb section -->
-
+        <style>
+            @media(max-width: 1000px){
+                .blog__section--inner{
+                    width: 100%;
+                }
+                .row{flex-direction:column;
+                    width: 100%;
+                }
+            }
+        </style>
         <!-- Start blog section -->
         <section class="blog__section section--padding">
             <div class="container">
@@ -216,68 +225,23 @@
                     <h2 class="section__heading--maintitle">From The Blog</h2>
                 </div>
                 <div class="blog__section--inner">
-                    <div class="row row-cols-lg-4 row-cols-md-4 row-cols-sm-4 row-cols-sm-u-4 row-cols-4 mb--n30" style="display: flex;">
-                        {% for post in posts %}
-                        <div class="" style="margin-left: 2%; background-color:white; text-align: center; ">
+                    <div class="row " style="display: flex;">
+                        {% for post in posts %} 
+                        <div class="card" style="margin-left: 2%; background-color:white;box-shadow: 5px 5px 5px 5px #e2dede; text-align: center;margin-top: 5%; ">
                             <div class="blog__items">
                                 <div class="card-image">
-                                    <img src="{{ post.image.url }}" width="100%" height="30%" alt="blog-img" />
+                                    <img src="{{ post.image.url }}" width="100%"  alt="blog-img" />
                                 </div>
                                 <div class="card-body">
                                     <span class="card-text">{{ post.created_at }}</span>
                                     <h3 class="card-title">
                                         <a href="">{{ post.heading }}</a>
                                     </h3>
-                                    <a class="blog__content--btn primary__btn" href="{% url 'blogDetails' blogs_id=post.id %}">Read more </a>
+                                    <a class="blog__content--btn primary__btn " href="{% url 'blogDetails' blogs_id=post.id %}">Read more </a>
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
-                    </div>
-                    
-                    <div class="pagination__area bg__gray--color">
-                        <nav class="pagination">
-                            <ul class="pagination__wrapper d-flex align-items-center justify-content-center">
-                                <li class="pagination__list">
-                                    <a href="{% url 'blogs' %}" class="pagination__item--arrow link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22.51" height="20.443"
-                                            viewBox="0 0 512 512">
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="48"
-                                                d="M244 400L100 256l144-144M120 256h292" />
-                                        </svg>
-                                        <span class="visually-hidden">pagination arrow</span>
-                                    </a>
-                                </li>
-
-                                <li></li>
-                                <li class="pagination__list">
-                                    <span class="pagination__item pagination__item--current">1</span>
-                                </li>
-                                <li class="pagination__list">
-                                    <a href="{% url 'blogs' %}" class="pagination__item link">2</a>
-                                </li>
-                                <li class="pagination__list">
-                                    <a href="{% url 'blogs' %}" class="pagination__item link">3</a>
-                                </li>
-                                <li class="pagination__list">
-                                    <a href="{% url 'blogs' %}" class="pagination__item link">4</a>
-                                </li>
-                                <li class="pagination__list">
-                                    <a href="{% url 'blogs' %}" class="pagination__item--arrow link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22.51" height="20.443"
-                                            viewBox="0 0 512 512">
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="48"
-                                                d="M268 112l144 144-144 144M392 256H100" />
-                                        </svg>
-                                        <span class="visually-hidden">pagination arrow</span>
-                                    </a>
-                                </li>
-
-                                <li></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
                 
