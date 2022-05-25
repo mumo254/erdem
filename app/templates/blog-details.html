@@ -73,34 +73,39 @@
     <header class="header__section">
         <div class="main__header header__sticky">
             <div class="container-fluid">
-                <div class="header__menu  header__sticky--block d-lg-block">
-                    <nav class="header__menu--navigation" >
-                        <ul class="d-flex" >
-                            <li class="header__menu--items style2">
-                                <a class="header__menu--link text-dark" href="{% url 'index' %}">Home
-                                </a>
-                            </li>
-                            <li class="header__menu--items mega__menu--items style2">
-                                <a class="header__menu--link text-dark" href="{% url 'about' %}">What is Erdem?
-                                </a>
-                            </li>
-                            <li class="header__menu--items style2  d-xl-block">
-                                <a class="header__menu--link text-dark" href="{% url 'solutions' %}">Solutions</a>
-                            </li>
-                            <li class="header__menu--items style2">
-                                <a class="header__menu--link text-dark" href="{% url 'blogs' %}">Blog
-                                </a>
-                            </li>
-                            <li class="header__menu--items style2">
-                                <a class="header__menu--link text-dark" href="{% url 'contact' %}">Contact Us</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
+                    <div class="header__menu d-none header__sticky--block d-lg-block">
+                        <nav class="header__menu--navigation">
+                            <ul class="d-flex" >
+                                <li class="header__menu--items style2">
+                                    <a class="header__menu--link text-dark" href="{% url 'index' %}" >Home
+                                    </a>
+                                </li>
+                               
+                                <li class="header__menu--items style2">
+                                    <a class="header__menu--link text-dark" href="{% url 'about' %}">What is Erdem?
+                                    </a>
+                                </li>
+                                <li class="header__menu--items style2">
+                                    <a class="header__menu--link text-dark" href="{% url 'blogs' %}">Blog
+                                    </a>
+                                </li>
+                                <li class="header__menu--items style2 d-none d-xl-block">
+                                    <a class="header__menu--link text-dark" href="s{% url 'solutions' %}">Solutions
+                                    </a>
+                                </li>
+                                <li class="header__menu--items style2">
+                                    <a class="header__menu--link text-dark" href="{% url 'contact' %}">Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        
+
+
         <div class="main__header header__sticky">
             <div class="container-fluid">
                 <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
@@ -129,7 +134,7 @@
                         <a class="offcanvas__menu_item" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="offcanvas__menu_li">
-                        <a class="offcanvas__menu_item" href="{% url 'index' %}">What is Erdem?</a>
+                        <a class="offcanvas__menu_item" href="{% url 'about' %}">What is Erdem?</a>
                     </li>
                     <li class="offcanvas__menu_li">
                         <a class="offcanvas__menu_item" href="{% url 'blogs' %}">Blog</a>
@@ -176,7 +181,7 @@
                     <div class="col-xxl-9 col-xl-8 col-lg-8">
                         <div class="blog__details--wrapper">
                             {% for blog in blog %}
-                            <div class="entry__blog card" style="width: 100%; box-shadow: 5px 5px 5px 5px #e2dede; margin-bottom:10%; margin-left:5%;">
+                            <div class="entry__blog card" style="width: 100%; box-shadow: 5px 5px 5px 5px #e2dede; margin-bottom:10%; margin-left:2%;">
                                 <div class=" blog__details--content blog__thumbnail mb-30">
                                     <img class="blog__thumbnail--img border-radius-10" style="background-color: black;width:50%; margin-left: 30%;" src="{{ blog.image.url }}" alt="blog-img">
                                 </div>
@@ -196,18 +201,20 @@
                                 <div class="reviews__comment--area2 mb-50">
                                     <h2 class="reviews__comment--reply__title mb-25">Recent Comments</h2>
                                     {% for comment in blog.comments.all %}
-                                    <div class="reviews__comment--inner" style="margin-top:5%;margin-left:20%; box-shadow: 5px 5px 5px 5px #e2dede;">
+                                    <div class="reviews__comment--inner" style="margin-top:5%; padding:5%;margin-left:10%; box-shadow: 5px 5px 5px 5px #e2dede;">
                                         <div class="reviews__comment--list d-flex">
                                             <div class="reviews__comment--content ">
-                                                <div class="comment__content--topbar d-flex justify-content-between">
-                                                    <div class="comment__content--topbar__left">
-                                                        <span
-                                                            class="reviews__comment--content__date2">{{ comment.created_at }}</span>
-                                                    </div>
-                                                </div>
+                                                
                                                 <p class="reviews__comment--content__desc">
                                                     <span><strong>{{comment.name}}</strong></span>:
                                                     {{ comment.comment }}</p>
+
+                                                    <div class="comment__content--topbar d-flex justify-content-between">
+                                                        <div class="comment__content--topbar__left" style="margin-left: 10%;font-weight:600;">
+                                                            <span
+                                                                class="reviews__comment--content__date2">{{ comment.created_at }}</span>
+                                                        </div>
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>
