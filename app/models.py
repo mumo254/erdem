@@ -6,9 +6,7 @@ class Blogs(models.Model):
     image = CloudinaryField('image')
     heading = models.CharField(max_length=100, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    paragraph1 = models.TextField(max_length=250, blank=True)
-    paragraph2 = models.TextField(max_length=250, blank=True)
-    paragraph3 = models.TextField(max_length=250, blank=True)
+    text = models.TextField(max_length=3000, blank=False)
 
     def __str__(self):
         return self.heading
